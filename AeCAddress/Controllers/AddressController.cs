@@ -30,9 +30,26 @@ namespace AeCAddress.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Update()
+        public IActionResult Update(int? id)
         {
-            return View();
+            if (id is null or 0)
+            {
+                return NotFound();
+            }
+            AddressModel address = _addressRepository.FindOne((int)id);
+
+            if (address == null)
+            {
+                return NotFound();
+            }
+            return View(address);
+        }
+
+        [HttpPost]
+        public IActionResult Update(AddressModel address)
+        {
+            _addressRepository.Update(address);
+            return RedirectToAction("Index");
         }
 
         public IActionResult DeleteComfirm()

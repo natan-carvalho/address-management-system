@@ -4,5 +4,7 @@ namespace AeCAddress.Repository
     {
         List<AddressModel> ListAll();
         AddressModel Add(AddressModel address);
+        AddressModel FindOne(int id);
+        AddressModel Update(AddressModel address);
     }
 }

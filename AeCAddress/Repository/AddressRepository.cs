@@ -28,5 +28,27 @@ namespace AeCAddress.Repository
             return address;
         }
 
+        public AddressModel FindOne(int id)
+        {
+            return _applicationDbContext.Endereco.FirstOrDefault(item => item.Id == id);
+        }
+
+        public AddressModel Update(AddressModel address)
+        {
+            AddressModel addressDB = FindOne(address.Id) ?? throw new Exception("There was an error updating the contact!");
+
+            addressDB.CEP = address.CEP;
+            addressDB.Logradouro = address.Logradouro;
+            addressDB.Complement = address.Complement;
+            addressDB.Bairro = address.Bairro;
+            addressDB.Cidade = address.Cidade;
+            addressDB.Numero = address.Numero;
+            addressDB.UF = address.UF;
+
+            _applicationDbContext.Endereco.Update(addressDB);
+            _applicationDbContext.SaveChanges();
+
+            return addressDB;
+        }
     }
 }
