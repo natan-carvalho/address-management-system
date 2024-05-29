@@ -1,0 +1,25 @@
+@{
+  ViewData["Title"] = "Login";
+}
+
+<div style="border-radius: 8px;padding: 20px;"
+  class="mt-5 w-75 container bg-dark text-light d-grid gap-3 justify-content-center align-items-center">
+  <h1 class="fs-2 text-center">Bem vindo ao Sistema de Endereços</h1>
+
+  <form class="mb-5">
+    <div class="mb-3">
+      <label for="usuario" class="form-label">Usuário</label>
+      <input class="form-control" placeholder="Usuário">
+    </div>
+    <div class="mb-3">
+      <label for="senha" class="form-label">Senha</label>
+      <input class="form-control" placeholder="Senha">
+    </div>
+    <br>
+    <div class="d-flex justify-content-between gap-5">
+      <button type="submit" class="btn btn-success w-100" asp-action="Login" asp-controller="User">Entrar</button>
+      <a role="button" class="btn btn-primary w-100" asp-action="Create" asp-controller="User">Criar Conta</a>
+    </div>
+
+  </form>
+</div>
