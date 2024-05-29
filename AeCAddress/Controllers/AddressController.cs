@@ -52,9 +52,32 @@ namespace AeCAddress.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult DeleteComfirm()
+
+        public IActionResult DeleteComfirm(int? id)
         {
-            return View();
+            if (id is null or 0)
+            {
+                return NotFound();
+            }
+            AddressModel address = _addressRepository.FindOne((int)id);
+
+            if (address == null)
+            {
+                return NotFound();
+            }
+            return View(address);
+
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if (id is null or 0)
+            {
+                return NotFound();
+            }
+            _addressRepository.Delete((int)id);
+
+            return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

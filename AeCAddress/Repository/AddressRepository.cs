@@ -50,5 +50,15 @@ namespace AeCAddress.Repository
 
             return addressDB;
         }
+
+        public bool Delete(int id)
+        {
+            AddressModel addressDB = FindOne(id) ?? throw new Exception("There was an error deleting the address.");
+
+            _applicationDbContext.Endereco.Remove(addressDB);
+            _applicationDbContext.SaveChanges();
+
+            return true;
+        }
     }
 }

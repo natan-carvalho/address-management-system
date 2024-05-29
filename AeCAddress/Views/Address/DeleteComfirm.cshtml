@@ -1,13 +1,18 @@
+@model AddressModel
 @{
   ViewData["Title"] = "Confirmar exclusão";
 }
 
 <div class="main text-center">
-  <h3>Realmente deseja apagar o este endereço?</h3>
+  <h3>Realmente deseja apagar este endereço?</h3>
+  <p class="fs-5">@Model.Logradouro, @Model.Complement, @Model.Numero, @Model.Bairro, @Model.Cidade, @Model.CEP -
+    @Model.UF
+  </p>
   <br>
   <div class="d-grid gap-2">
     <a class="btn btn-primary" role="button" asp-action="Index" asp-controller="Address">Cancelar exclusão</a>
-    <a class="btn btn-danger" role="button" asp-action="Delete" asp-controller="Address">Confirmar exclusão</a>
+    <a class="btn btn-danger" role="button" asp-route-id="@Model.Id" asp-action="Delete"
+      asp-controller="Address">Confirmar exclusão</a>
   </div>
 
 </div>
