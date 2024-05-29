@@ -1,0 +1,13 @@
+@{
+  ViewData["Title"] = "Confirmar exclusão";
+}
+
+<div class="main text-center">
+  <h3>Realmente deseja apagar o este endereço?</h3>
+  <br>
+  <div class="d-grid gap-2">
+    <a class="btn btn-primary" role="button" asp-action="Index" asp-controller="Address">Cancelar exclusão</a>
+    <a class="btn btn-danger" role="button" asp-action="Delete" asp-controller="Address">Confirmar exclusão</a>
+  </div>
+
+</div>

@@ -1,0 +1,46 @@
+@{
+  ViewData["Title"] = "Editar endereço";
+}
+
+<div class="main">
+  <h1 class="display-6">Editar endereço</h1>
+
+  <br>
+
+  <form>
+    <div class="mb-3">
+      <label for="cep" class="form-label">CEP</label>
+      <input type="text" class="form-control" placeholder="Digite o CEP">
+    </div>
+    <div class="mb-3">
+      <label for="logradouro" class="form-label">Logradouro</label>
+      <input type="text" class="form-control" placeholder="Digite o Logradouro">
+    </div>
+    <div class="mb-3">
+      <label for="complemento" class="form-label">Complemento</label>
+      <input type="text" class="form-control" placeholder="Digite o Complemento">
+    </div>
+    <div class="mb-3">
+      <label for="bairro" class="form-label">Bairro</label>
+      <input type="text" class="form-control" placeholder="Digite o Bairro">
+    </div>
+    <div class="mb-3">
+      <label for="cidade" class="form-label">Cidade</label>
+      <input type="text" class="form-control" placeholder="Digite a Cidade">
+    </div>
+    <div class="mb-3">
+      <label for="uf" class="form-label">Estado</label>
+      <input type="text" class="form-control" placeholder="Digite o Estado">
+    </div>
+    <div class="mb-3">
+      <label for="numero" class="form-label">Numero</label>
+      <input type="text" class="form-control" placeholder="Digite o Numero">
+    </div>
+
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-success">Alterar</button>
+      <a class="btn btn-secondary" role="button" asp-action="Index" asp-controller="Address">Voltar</a>
+    </div>
+
+  </form>
+</div>

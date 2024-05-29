@@ -1,0 +1,49 @@
+@model IEnumerable<AddressModel>
+@{
+  ViewData["Title"] = "Endereços";
+}
+
+<div class="main text-center">
+  <div class="d-flex justify-content-between">
+    <h1 class="display-6">Listagem de Endereços</h1>
+    <a asp-action="Create" asp-controller="Address" class="btn btn-success d-flex align-items-center h-50"
+      role="button">Adicionar novo Endereço</a>
+  </div>
+
+  <br />
+  <table class="table table-dark table-hover rounded">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">CEP</th>
+        <th scope="col">Logradouro</th>
+        <th scope="col">Complemento</th>
+        <th scope="col">Bairro</th>
+        <th scope="col">Cidade</th>
+        <th scope="col">UF</th>
+        <th scope="col">Numero</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-middle">
+        <th scope="row">1</th>
+        <td>01001-000</td>
+        <td>Praça da Sé</td>
+        <td>lado ímpar</td>
+        <td>Sé</td>
+        <td>São Paulo</td>
+        <td>SP</td>
+        <td>S/N</td>
+        <td>
+          <div class="btn-group gap-2" role="group" aria-label="Basic mixed styles example">
+            <a role="button" class="btn btn-warning rounded h-50" asp-action="Update"
+              asp-controller="Address">Editar</a>
+            <a role="button" class="btn btn-danger rounded h-50" asp-action="DeleteComfirm"
+              asp-controller="Address">Excluir</a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
