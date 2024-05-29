@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AeCAddress")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b03830a93e0659f04d7bcffd2d349f63633270d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6ff72b8c57eca83a265aad2a1f1831a579f0dde")]
 [assembly: System.Reflection.AssemblyProductAttribute("AeCAddress")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AeCAddress")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

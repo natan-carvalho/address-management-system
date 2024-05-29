@@ -14,6 +14,11 @@ namespace AeCAddress.Repository
             _applicationDbContext = applicationDbContext;
         }
 
+        public List<AddressModel> ListAll()
+        {
+            return [.. _applicationDbContext.Endereco]; // retorna uma lista ;
+        }
+
         public AddressModel Add(AddressModel address)
         {
             // save in db
@@ -22,5 +27,6 @@ namespace AeCAddress.Repository
 
             return address;
         }
+
     }
 }

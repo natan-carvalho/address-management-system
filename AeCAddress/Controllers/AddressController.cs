@@ -14,7 +14,8 @@ namespace AeCAddress.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<AddressModel> addresses = _addressRepository.ListAll();
+            return View(addresses);
         }
 
         public IActionResult Create()

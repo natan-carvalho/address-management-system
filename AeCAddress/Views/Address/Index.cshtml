@@ -1,4 +1,4 @@
-@model IEnumerable<AddressModel>
+@model List<AddressModel>
 @{
   ViewData["Title"] = "Endereços";
 }
@@ -26,24 +26,31 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="align-middle">
-        <th scope="row">1</th>
-        <td>01001-000</td>
-        <td>Praça da Sé</td>
-        <td>lado ímpar</td>
-        <td>Sé</td>
-        <td>São Paulo</td>
-        <td>SP</td>
-        <td>S/N</td>
-        <td>
-          <div class="btn-group gap-2" role="group" aria-label="Basic mixed styles example">
-            <a role="button" class="btn btn-warning rounded h-50" asp-action="Update"
-              asp-controller="Address">Editar</a>
-            <a role="button" class="btn btn-danger rounded h-50" asp-action="DeleteComfirm"
-              asp-controller="Address">Excluir</a>
-          </div>
-        </td>
-      </tr>
+      @if (Model != null && Model.Any())
+      {
+        foreach (AddressModel address in Model)
+        {
+          <tr class="align-middle">
+            <th scope="row">@address.Id</th>
+            <td>@address.CEP</td>
+            <td>@address.Logradouro</td>
+            <td>@address.Complement</td>
+            <td>@address.Bairro</td>
+            <td>@address.Cidade</td>
+            <td>@address.UF</td>
+            <td>@address.Numero</td>
+            <td>
+              <div class="btn-group gap-2" role="group" aria-label="Basic mixed styles example">
+                <a role="button" class="btn btn-warning rounded h-50" asp-route-itemid="@address.Id" asp-action="Update"
+                  asp-controller="Address">Editar</a>
+                <a role="button" class="btn btn-danger rounded h-50" asp-route-itemid="@address.Id"
+                  asp-action="DeleteComfirm" asp-controller="Address">Excluir</a>
+              </div>
+            </td>
+          </tr>
+        }
+      }
+
     </tbody>
   </table>
 </div>
