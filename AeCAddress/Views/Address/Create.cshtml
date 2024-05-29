@@ -1,3 +1,4 @@
+@model AddressModel
 @{
   ViewData["Title"] = "Cadastrar novo endereço";
 }
@@ -7,38 +8,38 @@
 
   <br>
 
-  <form>
+  <form asp-controller="Address" asp-action="Create" method="post">
     <div class="mb-3">
       <label for="cep" class="form-label">CEP</label>
-      <input type="text" class="form-control" placeholder="Digite o CEP">
+      <input type="text" asp-for="CEP" class="form-control" placeholder="Digite o CEP">
     </div>
     <div class="mb-3">
       <label for="logradouro" class="form-label">Logradouro</label>
-      <input type="text" class="form-control" placeholder="Digite o Logradouro">
+      <input type="text" asp-for="Logradouro" class="form-control" placeholder="Digite o Logradouro">
     </div>
     <div class="mb-3">
       <label for="complemento" class="form-label">Complemento</label>
-      <input type="text" class="form-control" placeholder="Digite o Complemento">
+      <input type="text" asp-for="Complement" class="form-control" placeholder="Digite o Complemento">
     </div>
     <div class="mb-3">
       <label for="bairro" class="form-label">Bairro</label>
-      <input type="text" class="form-control" placeholder="Digite o Bairro">
+      <input type="text" asp-for="Bairro" class="form-control" placeholder="Digite o Bairro">
     </div>
     <div class="mb-3">
       <label for="cidade" class="form-label">Cidade</label>
-      <input type="text" class="form-control" placeholder="Digite a Cidade">
+      <input type="text" asp-for="Cidade" class="form-control" placeholder="Digite a Cidade">
     </div>
     <div class="mb-3">
       <label for="uf" class="form-label">Estado</label>
-      <input type="text" class="form-control" placeholder="Digite o Estado">
+      <input type="text" asp-for="UF" class="form-control" placeholder="Digite o Estado">
     </div>
     <div class="mb-3">
       <label for="numero" class="form-label">Numero</label>
-      <input type="text" class="form-control" placeholder="Digite o Numero">
+      <input type="text" asp-for="Numero" class="form-control" placeholder="Digite o Numero">
     </div>
     <div class="mb-3">
       <label for="userid" class="form-label">UserID</label>
-      <input type="text" class="form-control" value="1">
+      <input type="text" asp-for="UsuarioID" class="form-control" value="1">
     </div>
 
     <div class="d-grid gap-2">

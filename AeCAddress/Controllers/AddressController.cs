@@ -1,14 +1,15 @@
+using AeCAddress.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AeCAddress.Controllers
 {
     public class AddressController : Controller
     {
-        private readonly ILogger<AddressController> _logger;
+        private readonly IAddressRepository _addressRepository;
 
-        public AddressController(ILogger<AddressController> logger)
+        public AddressController(IAddressRepository addressRepository)
         {
-            _logger = logger;
+            _addressRepository = addressRepository;
         }
 
         public IActionResult Index()
@@ -19,6 +20,13 @@ namespace AeCAddress.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(AddressModel address)
+        {
+            _addressRepository.Add(address);
+            return RedirectToAction("Index");
         }
 
         public IActionResult Update()

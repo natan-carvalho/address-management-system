@@ -1,4 +1,5 @@
 using AeCAddress.Data;
+using AeCAddress.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddScoped<IAddressRepository, AddressRepository>(); // aplicando injesão de dependencia, sempre que chamar a interface o repositorio vai ser usado
 
 var app = builder.Build();
 
