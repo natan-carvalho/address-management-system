@@ -26,8 +26,22 @@ namespace AeCAddress.Controllers
         [HttpPost]
         public IActionResult Create(AddressModel address)
         {
-            _addressRepository.Add(address);
-            return RedirectToAction("Index");
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _addressRepository.Add(address);
+                    TempData["SuccessMessage"] = "Contato cadastrado com sucesso";
+                    return RedirectToAction("Index");
+                }
+
+                return View(address);
+            }
+            catch (System.Exception error)
+            {
+                TempData["ErrorMessage"] = $"Ops, não foi possivel cadastar o endereço, detalhe do erro: {error.Message}";
+                return RedirectToAction("Index");
+            }
         }
 
         public IActionResult Update(int? id)
@@ -48,8 +62,23 @@ namespace AeCAddress.Controllers
         [HttpPost]
         public IActionResult Update(AddressModel address)
         {
-            _addressRepository.Update(address);
-            return RedirectToAction("Index");
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _addressRepository.Update(address);
+                    TempData["SuccessMessage"] = "Endereço atualizado com sucesso.";
+                    return RedirectToAction("Index");
+                }
+
+                return View(address);
+            }
+            catch (System.Exception error)
+            {
+                TempData["ErrorMessage"] = $"Ops, não foi possivel atualizar o endereço, detalhe do erro: {error.Message}";
+                return RedirectToAction("Index");
+            }
+
         }
 
 
@@ -71,13 +100,31 @@ namespace AeCAddress.Controllers
 
         public IActionResult Delete(int? id)
         {
-            if (id is null or 0)
+            try
             {
-                return NotFound();
-            }
-            _addressRepository.Delete((int)id);
+                if (id is null or 0)
+                {
+                    return NotFound();
+                }
+                bool deleted = _addressRepository.Delete((int)id);
 
-            return RedirectToAction("Index");
+                if (deleted)
+                {
+                    TempData["SuccessMessage"] = "Endereço excluido com sucesso.";
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "Ops, não foi possivel excluir o endereço!";
+                }
+
+                return RedirectToAction("Index");
+            }
+            catch (System.Exception error)
+            {
+                TempData["ErrorMessage"] = $"Ops, não foi possivel excluir o endereço, detalhe do erro: {error.Message}";
+                return RedirectToAction("Index");
+            }
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

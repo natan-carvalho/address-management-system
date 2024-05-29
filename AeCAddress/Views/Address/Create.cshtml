@@ -10,37 +10,42 @@
 
   <form asp-controller="Address" asp-action="Create" method="post">
     <div class="mb-3">
-      <label for="cep" class="form-label">CEP</label>
+      <label for="cep" class="form-label">CEP</label> <span class="text-danger">*</span>
       <input type="text" asp-for="CEP" class="form-control" placeholder="Digite o CEP">
+      <span class="text-danger" asp-validation-for="CEP"></span>
     </div>
     <div class="mb-3">
-      <label for="logradouro" class="form-label">Logradouro</label>
+      <label for="logradouro" class="form-label">Logradouro</label> <span class="text-danger">*</span>
       <input type="text" asp-for="Logradouro" class="form-control" placeholder="Digite o Logradouro">
+      <span class="text-danger" asp-validation-for="Logradouro"></span>
     </div>
     <div class="mb-3">
-      <label for="complemento" class="form-label">Complemento</label>
+      <label for="complemento" class="form-label">Complemento</label> <span class="text-danger">*</span>
       <input type="text" asp-for="Complement" class="form-control" placeholder="Digite o Complemento">
+      <span class="text-danger" asp-validation-for="Complement"></span>
     </div>
     <div class="mb-3">
-      <label for="bairro" class="form-label">Bairro</label>
+      <label for="bairro" class="form-label">Bairro</label> <span class="text-danger">*</span>
       <input type="text" asp-for="Bairro" class="form-control" placeholder="Digite o Bairro">
+      <span class="text-danger" asp-validation-for="Bairro"></span>
     </div>
     <div class="mb-3">
-      <label for="cidade" class="form-label">Cidade</label>
+      <label for="cidade" class="form-label">Cidade</label> <span class="text-danger">*</span>
       <input type="text" asp-for="Cidade" class="form-control" placeholder="Digite a Cidade">
+      <span class="text-danger" asp-validation-for="Cidade"></span>
     </div>
     <div class="mb-3">
-      <label for="uf" class="form-label">Estado</label>
+      <label for="uf" class="form-label">Estado</label> <span class="text-danger">*</span>
       <input type="text" asp-for="UF" class="form-control" placeholder="Digite o Estado">
+      <span class="text-danger" asp-validation-for="UF"></span>
     </div>
     <div class="mb-3">
-      <label for="numero" class="form-label">Numero</label>
+      <label for="numero" class="form-label">Numero</label> <span class="text-danger">*</span>
       <input type="text" asp-for="Numero" class="form-control" placeholder="Digite o Numero">
+      <span class="text-danger" asp-validation-for="Numero"></span>
     </div>
-    <div class="mb-3">
-      <label for="userid" class="form-label">UserID</label>
-      <input type="text" asp-for="UsuarioID" class="form-control" value="1">
-    </div>
+    <input type="hidden" asp-for="UsuarioID" class="form-control" value="1"><span class="text-danger"
+      asp-validation-for="UsuarioID"></span>
 
     <div class="d-grid gap-2">
       <button type="submit" class="btn btn-success">Adicionar</button>
