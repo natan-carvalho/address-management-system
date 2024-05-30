@@ -11,6 +11,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddScoped<IAddressRepository, AddressRepository>(); // aplicando injesão de dependencia, sempre que chamar a interface o repositorio vai ser usado
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 

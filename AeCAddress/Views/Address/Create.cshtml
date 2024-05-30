@@ -9,6 +9,7 @@
   <br>
 
   <form asp-controller="Address" asp-action="Create" method="post">
+    <input type="hidden" asp-for="Id">
     <div class="mb-3">
       <label for="cep" class="form-label">CEP</label> <span class="text-danger">*</span>
       <input type="text" asp-for="CEP" class="form-control" placeholder="Digite o CEP">
