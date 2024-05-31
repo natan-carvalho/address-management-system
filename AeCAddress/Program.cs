@@ -1,4 +1,5 @@
 using AeCAddress.Data;
+using AeCAddress.Helpers;
 using AeCAddress.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,8 +11,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<IAddressRepository, AddressRepository>(); // aplicando injesão de dependencia, sempre que chamar a interface o repositorio vai ser usado
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IMySession, MySession>();
+builder.Services.AddSession(sess =>
+{
+    sess.Cookie.HttpOnly = true;
+    sess.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 
@@ -29,9 +37,10 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=User}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();
