@@ -1,3 +1,4 @@
+using System.Text;
 using AeCAddress.Helpers;
 using AeCAddress.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -87,6 +88,26 @@ namespace AeCAddress.Controllers
 
         }
 
+        public IActionResult ExportCSV()
+        {
+            string fileSvgPath = "./wwwroot/list_address.csv";
+            int userId = _session.GetSession().Id;
+            List<AddressModel> addresses = _addressRepository.ListAll(userId);
+
+            string header = "ID; CEP; LOGRADOURO; COMPLEMENTO; BAIRRO; CIDADE; UF; NUMERO";
+
+            using (StreamWriter writer = new(fileSvgPath, false, Encoding.UTF8))
+            {
+                writer.WriteLine(header);
+
+                foreach (AddressModel address in addresses)
+                {
+                    writer.WriteLine(address.ToString());
+                }
+            }
+
+            return Redirect("/list_address.csv");
+        }
 
         public IActionResult DeleteComfirm(int? id)
         {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XTkwY3+mSvOGDFuizoYTdOU0MyCd2WYbk2zuNO6MLsg=",
+  "Hash": "OnmwDEdVeJeMRIX9+pJ/0r0E7UwfHNWANrouaaxDLbY=",
   "Source": "AeCAddress",
   "BasePath": "_content/AeCAddress",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Natan\\Desktop\\projects\\AeCAddress\\AeCAddress\\wwwroot\\list_address.csv",
+      "SourceId": "AeCAddress",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Natan\\Desktop\\projects\\AeCAddress\\AeCAddress\\wwwroot\\",
+      "BasePath": "_content/AeCAddress",
+      "RelativePath": "list_address.csv",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\list_address.csv"
     }
   ]
 }
