@@ -9,35 +9,34 @@
   <br>
 
   <form asp-controller="Address" asp-action="Create" method="post">
-    <input type="hidden" asp-for="Id">
     <div class="mb-3">
       <label for="cep" class="form-label">CEP</label> <span class="text-danger">*</span>
-      <input type="text" asp-for="CEP" class="form-control" placeholder="Digite o CEP">
+      <input id="cep" type="text" asp-for="CEP" class="form-control" placeholder="Digite o CEP">
       <span class="text-danger" asp-validation-for="CEP"></span>
     </div>
     <div class="mb-3">
       <label for="logradouro" class="form-label">Logradouro</label> <span class="text-danger">*</span>
-      <input type="text" asp-for="Logradouro" class="form-control" placeholder="Digite o Logradouro">
+      <input id="logradouro" type="text" asp-for="Logradouro" class="form-control" placeholder="Digite o Logradouro">
       <span class="text-danger" asp-validation-for="Logradouro"></span>
     </div>
     <div class="mb-3">
       <label for="complemento" class="form-label">Complemento</label> <span class="text-danger">*</span>
-      <input type="text" asp-for="Complement" class="form-control" placeholder="Digite o Complemento">
+      <input id="complemento" type="text" asp-for="Complement" class="form-control" placeholder="Digite o Complemento">
       <span class="text-danger" asp-validation-for="Complement"></span>
     </div>
     <div class="mb-3">
       <label for="bairro" class="form-label">Bairro</label> <span class="text-danger">*</span>
-      <input type="text" asp-for="Bairro" class="form-control" placeholder="Digite o Bairro">
+      <input id="bairro" type="text" asp-for="Bairro" class="form-control" placeholder="Digite o Bairro">
       <span class="text-danger" asp-validation-for="Bairro"></span>
     </div>
     <div class="mb-3">
       <label for="cidade" class="form-label">Cidade</label> <span class="text-danger">*</span>
-      <input type="text" asp-for="Cidade" class="form-control" placeholder="Digite a Cidade">
+      <input id="cidade" type="text" asp-for="Cidade" class="form-control" placeholder="Digite a Cidade">
       <span class="text-danger" asp-validation-for="Cidade"></span>
     </div>
     <div class="mb-3">
       <label for="uf" class="form-label">Estado</label> <span class="text-danger">*</span>
-      <input type="text" asp-for="UF" class="form-control" placeholder="Digite o Estado">
+      <input id="estado" type="text" asp-for="UF" class="form-control" placeholder="Digite o Estado">
       <span class="text-danger" asp-validation-for="UF"></span>
     </div>
     <div class="mb-3">
@@ -45,7 +44,7 @@
       <input type="text" asp-for="Numero" class="form-control" placeholder="Digite o Numero">
       <span class="text-danger" asp-validation-for="Numero"></span>
     </div>
-    <input type="hidden" asp-for="UsuarioID" class="form-control" value="1"><span class="text-danger"
+    <input type="hidden" asp-for="UsuarioID" class="form-control" value="0"><span class="text-danger"
       asp-validation-for="UsuarioID"></span>
 
     <div class="d-grid gap-2">

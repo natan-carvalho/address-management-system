@@ -23,4 +23,8 @@ public class AddressModel
   [Required(ErrorMessage = "Usuário invalido")]
   public required int UsuarioID { get; set; }
 
+  public override string ToString()
+  {
+    return $"{Id}; {CEP}; {Logradouro}; {Complement}; {Bairro}; {Cidade}; {UF}; {Numero}";
+  }
 }
