@@ -135,3 +135,4 @@ C:\Users\Natan\Desktop\projects\AeCAddress\AeCAddress\bin\Debug\net8.0\runtimes\
 C:\Users\Natan\Desktop\projects\AeCAddress\AeCAddress\obj\Debug\net8.0\AeCAddress.csproj.AssemblyReference.cache
 C:\Users\Natan\Desktop\projects\AeCAddress\AeCAddress\obj\Debug\net8.0\AeCAddress.csproj.Up2Date
 C:\Users\Natan\Desktop\projects\AeCAddress\AeCAddress\obj\Debug\net8.0\AeCAddress.sourcelink.json
+C:\Users\Natan\Desktop\projects\AeCAddress\AeCAddress\bin\Debug\net8.0\Newtonsoft.Json.dll
