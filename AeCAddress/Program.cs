@@ -11,10 +11,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<IAddressRepository, AddressRepository>(); // aplicando injesão de dependencia, sempre que chamar a interface o repositorio vai ser usado
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IMySession, MySession>();
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSession(sess =>
 {
     sess.Cookie.HttpOnly = true;

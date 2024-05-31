@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using AeCAddress.Helpers;
 using AeCAddress.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -12,9 +13,11 @@ namespace AeCAddress.Controllers
     public class UserController : Controller
     {
         private readonly IUserRepository _userRepository;
-        public UserController(IUserRepository userRepository)
+        private readonly IMySession _session;
+        public UserController(IUserRepository userRepository, IMySession session)
         {
             _userRepository = userRepository;
+            _session = session;
         }
 
         public IActionResult Index()
@@ -37,6 +40,7 @@ namespace AeCAddress.Controllers
                     UserModel userAlreadyExists = _userRepository.FindByLogin(user.Usuario);
                     if (userAlreadyExists is null)
                     {
+                        _session.CreateSession(user);
                         _userRepository.Create(user);
                         return RedirectToAction("Index", "Home");
                     }
