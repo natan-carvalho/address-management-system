@@ -9,63 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AeCAddress
 build_property.RootNamespace = AeCAddress
-build_property.ProjectDir = C:\Users\Natan\Desktop\projects\AeCAddress\AeCAddress\
+build_property.ProjectDir = C:\Users\Natan\Desktop\projects\address-management-system\AeCAddress\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Natan\Desktop\projects\AeCAddress\AeCAddress
+build_property.MSBuildProjectDirectory = C:\Users\Natan\Desktop\projects\address-management-system\AeCAddress
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/Address/Create.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/Address/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/Address/DeleteComfirm.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/Address/DeleteComfirm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc1xEZWxldGVDb21maXJtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/Address/Index.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/Address/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/Address/Update.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/Address/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/Home/Index.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/Home/Privacy.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/Shared/Error.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/User/Create.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/User/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/User/Index.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/_ViewImports.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/_ViewStart.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natan/Desktop/projects/AeCAddress/AeCAddress/Views/Shared/_Layout.cshtml]
+[C:/Users/Natan/Desktop/projects/address-management-system/AeCAddress/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-sxnrv6jw84

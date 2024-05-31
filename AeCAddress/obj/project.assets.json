@@ -4112,11 +4112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Natan\\Desktop\\projects\\AeCAddress\\AeCAddress\\AeCAddress.csproj",
+      "projectUniqueName": "C:\\Users\\Natan\\Desktop\\projects\\address-management-system\\AeCAddress\\AeCAddress.csproj",
       "projectName": "AeCAddress",
-      "projectPath": "C:\\Users\\Natan\\Desktop\\projects\\AeCAddress\\AeCAddress\\AeCAddress.csproj",
+      "projectPath": "C:\\Users\\Natan\\Desktop\\projects\\address-management-system\\AeCAddress\\AeCAddress.csproj",
       "packagesPath": "C:\\Users\\Natan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Natan\\Desktop\\projects\\AeCAddress\\AeCAddress\\obj\\",
+      "outputPath": "C:\\Users\\Natan\\Desktop\\projects\\address-management-system\\AeCAddress\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Natan\\AppData\\Roaming\\NuGet\\NuGet.Config",
