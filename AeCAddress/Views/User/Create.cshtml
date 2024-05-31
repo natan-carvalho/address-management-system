@@ -3,6 +3,14 @@
   ViewData["Title"] = "Criar Usuário";
 }
 
+@if (TempData["ErrorMessage"] != null)
+{
+  <div class="alert alert-danger" role="alert">
+    <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+    @TempData["ErrorMessage"]
+  </div>
+}
+
 <div style="border-radius: 8px;padding: 20px;"
   class="mt-5 w-75 container bg-dark text-light d-grid gap-3 justify-content-center align-items-center">
   <h1 class="fs-2 text-center">Bem vindo ao Sistema de Endereços</h1>
@@ -13,20 +21,23 @@
     <div class="mb-3">
       <label for="nome" class="form-label">Nome</label>
       <input class="form-control" asp-for="Nome" placeholder="Nome">
+      <span class="text-danger" asp-validation-for="Nome"></span>
     </div>
     <div class="mb-3">
       <label for="usuario" class="form-label">Usuário</label>
       <input asp-for="Usuario" class="form-control" placeholder="Usuário">
+      <span class="text-danger" asp-validation-for="Usuario"></span>
     </div>
     <div class="mb-3">
       <label for="senha" class="form-label">Senha</label>
       <input asp-for="Senha" type="password" class="form-control" placeholder="Senha">
+      <span class="text-danger" asp-validation-for="Senha"></span>
     </div>
     <br>
 
     <div class="d-flex justify-content-between gap-5">
       <button type="submit" class="btn btn-success w-100">Criar Conta</button>
-      <a role="button" class="btn btn-primary w-100" asp-action="Index" asp-controller="User">Entrar</a>
+      <a role="button" class="btn btn-primary w-100" asp-action="Index" asp-controller="Login">Entrar</a>
     </div>
 
   </form>

@@ -30,8 +30,25 @@ namespace AeCAddress.Controllers
         [HttpPost]
         public IActionResult Create(UserModel user)
         {
-            _userRepository.Create(user);
-            return RedirectToAction("Index", "Address");
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    UserModel userAlreadyExists = _userRepository.FindByLogin(user.Usuario);
+                    if (userAlreadyExists is null)
+                    {
+                        _userRepository.Create(user);
+                        return RedirectToAction("Index", "Home");
+                    }
+                    TempData["ErrorMessage"] = $"Ops, não foi possivel efetuar seu cadastro, usuário já existe. Por favor tente novamente";
+                }
+                return View("Create");
+            }
+            catch (System.Exception)
+            {
+                TempData["ErrorMessage"] = $"Ops, não foi possivel efetuar seu cadastro. Por favor tente novamente";
+                return RedirectToAction("Index");
+            }
         }
 
         public IActionResult Login()
