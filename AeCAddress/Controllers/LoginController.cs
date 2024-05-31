@@ -29,21 +29,27 @@ namespace AeCAddress.Controllers
         {
             try
             {
-                UserModel user = _userRepository.FindByLogin(login.Usuario);
-                if (user != null)
+                if (ModelState.IsValid)
                 {
-                    if (user.PasswordIsValid(login.Senha))
+                    UserModel user = _userRepository.FindByLogin(login.Usuario);
+                    if (user != null)
                     {
-                        return RedirectToAction("Index", "Home");
+                        if (user.PasswordIsValid(login.Senha))
+                        {
+                            return RedirectToAction("Index", "Home");
+                        }
+
+                        TempData["ErrorMessage"] = $"Ops, usuário e/ou senha invalidos. Por favor tente novamente";
                     }
+                    TempData["ErrorMessage"] = $"Ops, usuário e/ou senha invalidos. Por favor tente novamente";
                 }
 
                 return View("Index");
             }
             catch (System.Exception)
             {
-
-                throw;
+                TempData["ErrorMessage"] = $"Ops, não foi possivel efetuar seu login. Por favor tente novamente";
+                return RedirectToAction("Index");
             }
         }
 
