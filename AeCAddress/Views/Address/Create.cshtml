@@ -9,7 +9,6 @@
   <br>
 
   <form asp-controller="Address" asp-action="Create" method="post">
-    <input type="hidden" asp-for="Id">
     <div class="mb-3">
       <label for="cep" class="form-label">CEP</label> <span class="text-danger">*</span>
       <input type="text" asp-for="CEP" class="form-control" placeholder="Digite o CEP">
@@ -45,7 +44,7 @@
       <input type="text" asp-for="Numero" class="form-control" placeholder="Digite o Numero">
       <span class="text-danger" asp-validation-for="Numero"></span>
     </div>
-    <input type="hidden" asp-for="UsuarioID" class="form-control" value="1"><span class="text-danger"
+    <input type="hidden" asp-for="UsuarioID" class="form-control" value="0"><span class="text-danger"
       asp-validation-for="UsuarioID"></span>
 
     <div class="d-grid gap-2">

@@ -10,9 +10,9 @@ namespace AeCAddress.Repository
             _applicationDbContext = applicationDbContext;
         }
 
-        public List<AddressModel> ListAll()
+        public List<AddressModel> ListAll(int userId)
         {
-            return [.. _applicationDbContext.Endereco]; // retorna uma lista ;
+            return [.. _applicationDbContext.Endereco.Where(address => address.UsuarioID == userId)]; // retorna uma lista ;
         }
 
         public AddressModel Add(AddressModel address)

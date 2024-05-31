@@ -1,3 +1,4 @@
+using AeCAddress.Helpers;
 using AeCAddress.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,15 +7,18 @@ namespace AeCAddress.Controllers
     public class AddressController : Controller
     {
         private readonly IAddressRepository _addressRepository;
+        private readonly IMySession _session;
 
-        public AddressController(IAddressRepository addressRepository)
+        public AddressController(IAddressRepository addressRepository, IMySession session)
         {
             _addressRepository = addressRepository;
+            _session = session;
         }
 
         public IActionResult Index()
         {
-            List<AddressModel> addresses = _addressRepository.ListAll();
+            int userId = _session.GetSession().Id;
+            List<AddressModel> addresses = _addressRepository.ListAll(userId);
             return View(addresses);
         }
 
@@ -30,6 +34,8 @@ namespace AeCAddress.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    int userId = _session.GetSession().Id;
+                    address.UsuarioID = userId;
                     _addressRepository.Add(address);
                     TempData["SuccessMessage"] = "Contato cadastrado com sucesso";
                     return RedirectToAction("Index");
