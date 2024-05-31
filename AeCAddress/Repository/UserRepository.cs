@@ -17,5 +17,10 @@ namespace AeCAddress.Repository
 
             return user;
         }
+
+        public UserModel FindByLogin(string login)
+        {
+            return _applicationDbContext.Usuarios.FirstOrDefault(user => user.Usuario.ToUpper() == login.ToUpper())!;
+        }
     }
 }
