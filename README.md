@@ -51,9 +51,16 @@ Adreess scree:
 
 It is necessary to have a .NET environment installed.
 
+Upload the migrations to the database.
+```bash
+dotnet ef database update
+```
+Download dependencies
+```bash
+dotnet restore
+```
 
 ### Run Project
-
 
 ```bash
 dotnet run Program.cs
