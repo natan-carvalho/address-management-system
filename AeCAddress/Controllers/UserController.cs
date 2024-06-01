@@ -51,7 +51,7 @@ namespace AeCAddress.Controllers
             catch (System.Exception)
             {
                 TempData["ErrorMessage"] = $"Ops, não foi possivel efetuar seu cadastro. Por favor tente novamente";
-                return RedirectToAction("Index");
+                return RedirectToAction("Create");
             }
         }
 
