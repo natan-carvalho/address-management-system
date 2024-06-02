@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  dotnet-app:
+    image: mcr.microsoft.com/dotnet/sdk:latest
+    container_name: dotnet_app_container
+    volumes:
+      - ./:/app
+    working_dir: /app
+    entrypoint: [ "/bin/sh", "/app/entrypoint.sh" ]
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=developmentdb;User ID=sa;Password=AdminSystem0;trusted_connection=true;Encrypt=False;TrustServerCertificate=False;Connect Timeout=15;Integrated Security=False;
+
+  db:
+    container_name: sql_server_db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "AdminSystem0"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    restart: always
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    restart: always
+
+volumes:
+  sqlserver_data:
+    driver: local
