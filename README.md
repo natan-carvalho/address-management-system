@@ -9,6 +9,7 @@
 ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927)
 ![.Net](https://img.shields.io/badge/.NET-5C2D91)
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg)
 
 </div>
@@ -27,6 +28,12 @@
 - [🏁 Getting Started ](#-getting-started-)
   - [Run Project](#run-project)
 - [🎈 Usage ](#-usage-)
+  - [Login Screen](#login-screen)
+  - [Create user screen](#create-user-screen)
+  - [Address listing screen](#address-listing-screen)
+  - [Create address screen](#create-address-screen)
+  - [Edit address screen](#edit-address-screen)
+  - [Delete address screen](#delete-address-screen)
 - [⛏️ Built With ](#️-built-with-)
 - [✍️ Authors ](#️-authors-)
 
@@ -49,36 +56,32 @@ Adreess scree:
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-It is necessary to have a .NET environment installed.
+You must have an environment with Docker compose installed.
 
-Upload the migrations to the database.
-```bash
-dotnet ef database update
-```
-Download dependencies
-```bash
-dotnet restore
-```
+In the project directory, run the container to use the application.
 
 ### Run Project
 
 ```bash
-dotnet run Program.cs
-
-info: Microsoft.Hosting.Lifetime[14]
-      Now listening on: http://localhost:5242
-info: Microsoft.Hosting.Lifetime[0]
-      Application started. Press Ctrl+C to shut down.
-info: Microsoft.Hosting.Lifetime[0]
-      Hosting environment: Development
-info: Microsoft.Hosting.Lifetime[0]
-      Content root path: C:\your_installation_folder\address-management-system\AeCAddress
+docker compose up --build -d
 ```
-
 
 ## 🎈 Usage <a name="usage"></a>
 
 First create a user, go to the home screen, then you can go to addresses and do all the manipulation.
+
+### Login Screen
+![Login Screen](/Img/login.png)
+### Create user screen
+![Create user screen](/Img/create_user.png)
+### Address listing screen
+![Address listing screen](/Img/address_list.png)
+### Create address screen
+![Create address screen](/Img/create_address.png)
+### Edit address screen
+![Edit address screen](/Img/edit_address.png)
+### Delete address screen
+![Delete address screen](/Img/delete_address.png)
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
@@ -86,6 +89,7 @@ First create a user, go to the home screen, then you can go to addresses and do 
 - [ASP NET](https://dotnet.microsoft.com/pt-br/apps/aspnet) - Server Framework
 - [.NET](https://dotnet.microsoft.com/pt-br/) - Server Environment
 - [C#](https://dotnet.microsoft.com/pt-br/languages/csharp) - Programming language
+- [Docker](https://www.docker.com/) - Containerization
 
 ## ✍️ Authors <a name = "authors"></a>
 
