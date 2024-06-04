@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using AeCAddress.Helpers;
 
 namespace AeCAddress;
 
@@ -15,5 +16,10 @@ public class UserModel
   public bool PasswordIsValid(string password)
   {
     return Senha == password;
+  }
+
+  public void SetPasswordHash()
+  {
+    Senha = Senha.Hash();
   }
 }

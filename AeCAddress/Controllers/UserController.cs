@@ -34,6 +34,7 @@ namespace AeCAddress.Controllers
                     UserModel userAlreadyExists = _userRepository.FindByLogin(user.Usuario);
                     if (userAlreadyExists is null)
                     {
+                        user.SetPasswordHash();
                         _session.CreateSession(user);
                         _userRepository.Create(user);
                         return RedirectToAction("Index", "Home");
@@ -42,7 +43,7 @@ namespace AeCAddress.Controllers
                 }
                 return View("Create");
             }
-            catch (System.Exception)
+            catch (Exception)
             {
                 TempData["ErrorMessage"] = $"Ops, não foi possivel efetuar seu cadastro. Por favor tente novamente";
                 return RedirectToAction("Create");
