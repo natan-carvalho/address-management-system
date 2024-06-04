@@ -3,7 +3,7 @@ using System.Text;
 
 namespace AeCAddress.Helpers
 {
-    public static class Criptografy
+    public static class Cryptography
     {
         public static string Hash(this string value)
         {
