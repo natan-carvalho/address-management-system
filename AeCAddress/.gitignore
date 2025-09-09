@@ -1,0 +1,45 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Packages
+*.nupkg
+*.snupkg
+packages/
+
+# Build results
+*.dll
+*.exe
+*.app
+*.lib
+*.out
+*.pdb
+*.pyc
+*.class
+
+# Generated files
+*.generated.cs
+
+# Publish results
+publish/
+out/
+
+# Dependency directories
+node_modules/
