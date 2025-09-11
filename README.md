@@ -6,7 +6,7 @@
 
 <div align="center">
 
-![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927)
+![PostgreSQL](https://img.shields.io/badge/postgresql-%23316192.svg?logo=postgresql&logoColor=white)
 ![.Net](https://img.shields.io/badge/.NET-5C2D91)
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg)
@@ -51,7 +51,7 @@ Adreess scree:
 ## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
 
 - Microsoft.EntityFrameworkCore and its dependencies to work with the database.
-- Microsoft.EntityFrameworkCore.SqlServer to work with sql server.
+- Npgsql.EntityFrameworkCore.PostgreSQL to work with PostgreSQL.
 - Newtonsoft.Json to convert json to string and string to json.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
@@ -85,7 +85,7 @@ First create a user, go to the home screen, then you can go to addresses and do 
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
-- [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads) - Database
+- [PostgreSQL](https://www.postgresql.org/) - Database
 - [ASP NET](https://dotnet.microsoft.com/pt-br/apps/aspnet) - Server Framework
 - [.NET](https://dotnet.microsoft.com/pt-br/) - Server Environment
 - [C#](https://dotnet.microsoft.com/pt-br/languages/csharp) - Programming language
@@ -93,6 +93,6 @@ First create a user, go to the home screen, then you can go to addresses and do 
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@natancs](https://github.com/natancs) - Idea & Initial work
+- [@natan-carvalho](https://github.com/natan-carvalho) - Idea & Initial work
 
 Thanks.
